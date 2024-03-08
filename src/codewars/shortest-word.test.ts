@@ -15,4 +15,13 @@ describe('Shortest-word', () => {
     expect(findShort('"turns out random test cases are easier than writing out basic ones"'))
         .toBe(3)
   });
+
+  it('should one line', () => {
+    function findShort(s: string): number{
+        return Math.min(...s.split(' ').map(val => val.length))
+    }
+
+    expect(findShort('"turns out random test cases are easier than writing out basic ones"'))
+        .toBe(3)
+  });
 })

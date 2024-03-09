@@ -13,4 +13,12 @@ describe('Disemvowel Trolls', () => {
 
       expect(disemvowel("No offense but,\nYour writing is among the worst I've ever read")).toBe("N ffns bt,\nYr wrtng s mng th wrst 'v vr rd");
   });
+
+  it('should one line', () => {
+    function disemvowel(str: string) : string {
+        return str.replace(/[aeiou]/gi, '');
+      }
+
+      expect(disemvowel("No offense but,\nYour writing is among the worst I've ever read")).toBe("N ffns bt,\nYr wrtng s mng th wrst 'v vr rd");
+  });
 })

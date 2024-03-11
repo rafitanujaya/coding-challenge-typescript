@@ -13,4 +13,13 @@ describe('List Filtering', () => {
 
       expect(filter_list([1,2,'aasf','1','123',123])).toEqual([1,2,123])
   });
+
+  it('should one line', () => {
+    function filter_list(l: Array<number|string>) : number[] {
+        return l.filter(val => typeof val == 'number') as number[]
+      }
+
+
+      expect(filter_list([1,2,'aasf','1','123',123])).toEqual([1,2,123])
+  });
 })

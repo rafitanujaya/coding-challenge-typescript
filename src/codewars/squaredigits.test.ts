@@ -19,4 +19,13 @@ describe('squareDigits', () => {
       expect(squareDigits(3212)).toBe(9414)
     
   });
+
+  it('should one line', () => {
+    function squareDigits(num: number) : number{
+        return Number(num.toString().split('').map(val => Number(val) * Number(val)).join(''))
+      }
+
+      expect(squareDigits(3212)).toBe(9414)
+    
+  });
 })

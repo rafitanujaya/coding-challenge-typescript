@@ -20,4 +20,14 @@ describe("Mumbling", () => {
       "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu"
     );
   });
+
+  it("should barbar", () => {
+    function accum(s: string): string {
+      return s.split('').map((val, i) => val.toUpperCase() + val.toLowerCase().repeat(i)).join('-')
+    }
+
+    expect(accum("ZpglnRxqenU")).toBe(
+      "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu"
+    );
+  });
 });

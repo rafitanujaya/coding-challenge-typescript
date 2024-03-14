@@ -18,4 +18,11 @@ describe('Credit Card Mask', () => {
 
       expect(maskify('11111')).toBe('#1111')
   });
+
+  it('should one line', () => {
+    function maskify(cc :string) :string {
+        return  cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4)
+      }
+      expect(maskify('11111')).toBe('#1111')
+  });
 })

@@ -35,5 +35,13 @@ describe("You're a square!", () => {
     expect(isSquare(25)).toBeTruthy()
   });
 
-  
+  it('should one line', () => {
+
+     function isSquare(n: number ) : boolean{
+        return Number.isInteger(Math.sqrt(n))
+      }
+
+    expect(isSquare(26)).toBeFalsy()
+    expect(isSquare(25)).toBeTruthy()
+  });
 })

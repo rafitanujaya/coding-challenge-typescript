@@ -21,4 +21,14 @@ describe("Exes and Ohs", () => {
     expect(XO("xo")).toBe(true);
     expect(XO("ooom")).toBe(false);
   });
+
+  it("should short line", () => {
+    function XO(str: string): boolean {
+      let temp: string[] = str.split('');
+      return (temp.filter(val => val.toLowerCase() == 'x').length) === (temp.filter(val => val.toLowerCase() == 'o').length)
+    }
+
+    expect(XO("xo")).toBe(true);
+    expect(XO("ooom")).toBe(false);
+  });
 });

@@ -14,5 +14,13 @@ describe('Jaden Casing Strings', () => {
       expect("How can mirrors be real if our eyes aren't real".toJadenCase()).toBe("How Can Mirrors Be Real If Our Eyes Aren't Real")
   });
 
+  it('should one line', () => {
+    String.prototype.toJadenCase = function (this: string): string {
+        return this.split(' ').map(val => val[0].toUpperCase() + val.slice(1)).join(' ');
+    };
+
+      expect("How can mirrors be real if our eyes aren't real".toJadenCase()).toBe("How Can Mirrors Be Real If Our Eyes Aren't Real")
+  });
+
   
 })

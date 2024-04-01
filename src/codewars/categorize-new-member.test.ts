@@ -14,4 +14,12 @@ describe('Categorize New Member', () => {
 
     expect(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]])).toEqual(['Open', 'Senior', 'Open', 'Senior'])
   });
+
+  it('should one line', () => {
+    function openOrSenior(data: number[][]): string[]{
+        return data.map(value => value[0] >= 55 && value[1] > 7 ? 'Senior' : 'Open')
+      }
+
+    expect(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]])).toEqual(['Open', 'Senior', 'Open', 'Senior'])
+  });
 })
